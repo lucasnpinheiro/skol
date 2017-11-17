@@ -1,0 +1,22 @@
+<ion-menu [content]="content">
+    <ion-content>
+        <div style="background-image: url(assets/imgs/fundo-menu.jpeg); position: relative; height: 150px; background-size: cover; background-position: center center;">
+           <ion-icon (click)="perfil()" menuToggle style="position: absolute; right: 5px; top: 5px; font-size: 25px; color: #e0a15b;" name="cog"></ion-icon>
+            <div style="position: absolute; top: 25px; left: 25px;">
+                <img style="height: 75px; border-radius: 50%; width: 75px; box-shadow: 3px 3px 10px #000;" src="assets/imgs/rosto.jpg" />
+                <div>
+                    Julia da Silva
+                </div>
+            </div>
+        </div>
+        <ion-list>
+            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                    {{p.title}}
+        </button>
+    </ion-list>
+</ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false" style="background-image: url(assets/imgs/background.jpg); background-size: cover; background-position: center center;"></ion-nav>

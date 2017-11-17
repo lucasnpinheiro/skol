@@ -1,0 +1,20 @@
+page-chat {
+    .chat-user{
+        background: transparent;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 2px 5px;
+        .label-md, .label-ios{
+            margin: 0px;
+        }
+    }
+    .chat-amigo{
+        background: #52ffdf;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 2px 5px;
+        .label-md, .label-ios{
+            margin: 0px;
+        }
+    }
+}

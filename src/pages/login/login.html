@@ -1,0 +1,38 @@
+<ion-content padding>
+
+    <div style="margin-top: calc( (100% / 2) - 25%);">
+        <div text-center>
+            <img style="max-height: 150px; text-align: center;" src="assets/imgs/logo.png" />
+        </div>
+        <div>
+            <form [formGroup]="form">
+                <ion-list>
+
+                    <ion-item>
+                        <ion-label floating>E-mail</ion-label>
+                        <ion-input type="email" formControlName="email"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label floating>Senha</ion-label>
+                        <ion-input type="password" formControlName="senha"></ion-input>
+                    </ion-item>
+
+                    <ion-item text-center>
+                        <button ion-button icon-right [color]="!form.valid ? 'dark' : 'primary'" [disabled]="!form.valid" (click)="entrar()">
+                                Entrar <ion-icon name="log-in"></ion-icon>
+                        </button>
+                    </ion-item>
+
+                </ion-list>
+            </form>
+        </div>
+    </div>
+</ion-content>
+
+
+<ion-footer no-border text-center>
+    <button ion-button icon-right clear small color="dark" (click)="recuperar()">
+        Recuperar senha <ion-icon name="mail"></ion-icon>
+    </button>
+</ion-footer>
